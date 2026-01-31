@@ -4,11 +4,11 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
 
-//        System.out.println(validateSocial("123-45-6788"));
-//        System.out.println(validatePhoneNumber("253-332-1102"));
+//        System.out.println(validateSocial("123-45-6789"));
+//        System.out.println(validatePhoneNumber("901-558-9624"));
 //        System.out.println(validateEmail("dweaed22134@yahoo.co"));
-//        System.out.println(validateName("Nikita, Bizyuk, A"));
-         //   System.out.println(validateDate("02-28-1997"));
+//        System.out.println(validateName("jimmy, butler, A"));
+         //   System.out.println(validateDate("02-28-1995"));
         System.out.println(validateAddress("789 north main street"));
         System.out.println(cityStateZip("san diego, CA 98030"));
         System.out.println(militaryTime("0109"));
