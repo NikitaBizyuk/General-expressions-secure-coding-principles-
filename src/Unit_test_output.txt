@@ -1,0 +1,204 @@
+
+================================================================================
+REGEX UNIT TEST OUTPUT (Expected vs Actual)
+--------------------------------------------------------------------------------
+CATEGORY     | TEST NAME                                    | INPUT                            | EXPECT  | ACTUAL  | RES 
+--------------------------------------------------------------------------------
+CURRENCY     | invoke                                       | "$57,555,000.3"                  | false   | false   | PASS
+ADDRESS      | invoke                                       | "789"                            | false   | false   | PASS
+CITYSTATEZIP | invoke                                       | "San Diego CA 98030-123"         | false   | false   | PASS
+SSN          | invoke                                       | "999-99-9999"                    | true    | true    | PASS
+CITYSTATEZIP | invoke                                       | ", CA 98030"                     | false   | false   | PASS
+ODDION       | invoke                                       | "ion1"                           | false   | false   | PASS
+EMAIL        | invoke                                       | "name+tag@domain.com"            | true    | true    | PASS
+PASSWORD     | invoke                                       | "alllowercase1!"                 | false   | false   | PASS
+EMAIL        | invoke                                       | "first-last@domain.org"          | true    | true    | PASS
+PHONE        | invoke                                       | "(901-558-9624"                  | false   | false   | PASS
+EMAIL        | invoke                                       | "name@"                          | false   | false   | PASS
+CITYSTATEZIP | invoke                                       | "Portland OR 97201-0001"         | true    | true    | PASS
+MILTIME      | invoke                                       | "2359"                           | true    | true    | PASS
+ADDRESS      | invoke                                       | "789 North Main 123"             | false   | false   | PASS
+MILTIME      | invoke                                       | "0109"                           | true    | true    | PASS
+URL          | invoke                                       | "example.org/"                   | true    | true    | PASS
+PHONE        | invoke                                       | "901) 558-9624"                  | false   | false   | PASS
+NAME         | invoke                                       | "Smith, john, L"                 | false   | false   | PASS
+ADDRESS      | invoke                                       | "1600 Pennsylvania Avenue"       | true    | true    | PASS
+URL          | invoke                                       | "http://exa mple.com"            | false   | false   | PASS
+MILTIME      | invoke                                       | "1:00"                           | false   | false   | PASS
+EMAIL        | invoke                                       | "john.doe@gmail.com"             | true    | true    | PASS
+MILTIME      | invoke                                       | "1200"                           | true    | true    | PASS
+DATE         | invoke                                       | "13-01-2000"                     | false   | false   | PASS
+URL          | invoke                                       | "htp://example.com"              | false   | false   | PASS
+MILTIME      | invoke                                       | "1357"                           | true    | true    | PASS
+ODDION       | invoke                                       | "nationwide"                     | false   | false   | PASS
+DATE         | invoke                                       | "01-01-20"                       | false   | false   | PASS
+CURRENCY     | invoke                                       | "$57,55,000.36"                  | false   | false   | PASS
+ODDION       | invoke                                       | "creation"                       | false   | false   | PASS
+URL          | invoke                                       | "http://example.com"             | true    | true    | PASS
+NAME         | invoke                                       | "Garcia-Lopez, Maria, Q"         | true    | true    | PASS
+ODDION       | invoke                                       | "action"                         | false   | false   | PASS
+CITYSTATEZIP | invoke                                       | "Austin, TX 73301"               | true    | true    | PASS
+ADDRESS      | invoke                                       | "789 North Main Strt"            | false   | false   | PASS
+PHONE        | invoke                                       | "(901)5589624"                   | true    | true    | PASS
+SSN          | invoke                                       | "12-345-6789"                    | false   | false   | PASS
+DATE         | invoke                                       | "03/15/1987"                     | true    | true    | PASS
+PHONE        | invoke                                       | "(901)558-9624"                  | true    | true    | PASS
+PHONE        | invoke                                       | "901-558-962"                    | false   | false   | PASS
+CURRENCY     | invoke                                       | "$,123.45"                       | false   | false   | PASS
+CITYSTATEZIP | invoke                                       | "San Diego, CA-98030"            | false   | false   | PASS
+CURRENCY     | invoke                                       | "$12,34.56"                      | false   | false   | PASS
+EMAIL        | invoke                                       | "a@b.co"                         | true    | true    | PASS
+DATE         | invoke                                       | "12/31/2024"                     | true    | true    | PASS
+ODDION       | invoke                                       | "motion"                         | false   | false   | PASS
+EMAIL        | invoke                                       | "name@do main.com"               | false   | false   | PASS
+NAME         | invoke                                       | "Smith, John, L"                 | true    | true    | PASS
+EMAIL        | invoke                                       | "name@domain.c"                  | false   | false   | PASS
+URL          | invoke                                       | "www.example.com/path"           | true    | true    | PASS
+URL          | invoke                                       | "example"                        | false   | false   | PASS
+DATE         | invoke                                       | "02-28-1995"                     | true    | true    | PASS
+MILTIME      | invoke                                       | "1261"                           | false   | false   | PASS
+SSN          | invoke                                       | "123-45-67890"                   | false   | false   | PASS
+PASSWORD     | invoke                                       | "A1!abcdefGHI"                   | false   | false   | PASS
+EMAIL        | invoke                                       | "a%test@domain.net"              | true    | true    | PASS
+DATE         | invoke                                       | "01/1/2000"                      | false   | false   | PASS
+CURRENCY     | invoke                                       | "$1234.00"                       | true    | true    | PASS
+ODDION       | invoke                                       | "ions"                           | false   | false   | PASS
+NAME         | invoke                                       | "Smith, John,"                   | false   | false   | PASS
+PASSWORD     | invoke                                       | "A1!b2@C3#d4"                    | true    | true    | PASS
+PASSWORD     | invoke                                       | "Z9!a2Bc3dE"                     | true    | true    | PASS
+PASSWORD     | invoke                                       | "Qw1!Er2@Ty"                     | true    | true    | PASS
+PASSWORD     | invoke                                       | "M9$noP7&qr"                     | true    | true    | PASS
+PASSWORD     | invoke                                       | "X1!yZ2@wV3#"                    | true    | true    | PASS
+PASSWORD     | invoke                                       | "P4!qR5@stU6"                    | true    | true    | PASS
+PASSWORD     | invoke                                       | "Aa1!Bb2@Cc"                     | true    | true    | PASS
+EMAIL        | invoke                                       | "FIRST.LAST@EXAMPLE.COM"         | true    | true    | PASS
+SSN          | invoke                                       | "123 - 45 - 6789"                | true    | true    | PASS
+PHONE        | invoke                                       | "90-1558-9624"                   | false   | false   | PASS
+ODDION       | invoke                                       | "ION"                            | false   | false   | PASS
+DATE         | invoke                                       | "00/10/2000"                     | false   | false   | PASS
+PHONE        | invoke                                       | "(901) 5589624"                  | true    | true    | PASS
+ADDRESS      | invoke                                       | "789 North Main"                 | false   | false   | PASS
+EMAIL        | invoke                                       | "na me@domain.com"               | false   | false   | PASS
+ODDION       | invoke                                       | "zzzion"                         | false   | false   | PASS
+MILTIME      | invoke                                       | "2360"                           | false   | false   | PASS
+URL          | invoke                                       | "example.com"                    | true    | true    | PASS
+EMAIL        | invoke                                       | "@domain.com"                    | false   | false   | PASS
+NAME         | invoke                                       | "John Smith"                     | false   | false   | PASS
+DATE         | invoke                                       | "04-31-2012"                     | false   | false   | PASS
+NAME         | invoke                                       | "smith, John, L"                 | false   | false   | PASS
+SSN          | invoke                                       | "000-00-0000"                    | true    | true    | PASS
+SSN          | invoke                                       | "123-45-678"                     | false   | false   | PASS
+PHONE        | invoke                                       | "901-558-96244"                  | false   | false   | PASS
+DATE         | invoke                                       | "02-29-2024"                     | true    | true    | PASS
+ODDION       | invoke                                       | "caution"                        | true    | true    | PASS
+PHONE        | invoke                                       | "901 558-9624"                   | true    | true    | PASS
+NAME         | invoke                                       | "Smith, John, LL"                | false   | false   | PASS
+MILTIME      | invoke                                       | "9999"                           | false   | false   | PASS
+CURRENCY     | invoke                                       | "$12,345.67"                     | true    | true    | PASS
+PASSWORD     | invoke                                       | "NoPunctHere12"                  | false   | false   | PASS
+ADDRESS      | invoke                                       | "789 # Main Street"              | false   | false   | PASS
+PHONE        | invoke                                       | "901.558.9624"                   | false   | false   | PASS
+CITYSTATEZIP | invoke                                       | "Seattle, WA 98101-1234"         | true    | true    | PASS
+PHONE        | invoke                                       | "901-558-9624"                   | true    | true    | PASS
+DATE         | invoke                                       | "02/28/1995"                     | true    | true    | PASS
+MILTIME      | invoke                                       | "2400"                           | false   | false   | PASS
+DATE         | invoke                                       | "02/29/2023"                     | false   | false   | PASS
+NAME         | invoke                                       | "Smith,, John, L"                | false   | false   | PASS
+MILTIME      | invoke                                       | "0000"                           | true    | true    | PASS
+DATE         | invoke                                       | "01-01-2000"                     | true    | true    | PASS
+SSN          | invoke                                       | "123-45-6789x"                   | false   | false   | PASS
+PHONE        | invoke                                       | "9015589624"                     | true    | true    | PASS
+ADDRESS      | invoke                                       | "789 North Main St."             | false   | false   | PASS
+DATE         | invoke                                       | "1-01-2000"                      | false   | false   | PASS
+ADDRESS      | invoke                                       | "321 King Blvd"                  | true    | true    | PASS
+ODDION       | invoke                                       | "million"                        | true    | true    | PASS
+NAME         | invoke                                       | "D'Angelo, Tony, R"              | true    | true    | PASS
+ODDION       | invoke                                       | "reunion"                        | true    | true    | PASS
+CITYSTATEZIP | invoke                                       | "San Diego, CA 9803"             | false   | false   | PASS
+PHONE        | invoke                                       | "901-5589624"                    | true    | true    | PASS
+PASSWORD     | invoke                                       | "NoDigitsHere!!"                 | false   | false   | PASS
+EMAIL        | invoke                                       | "dweaed22134@yahoo.co"           | true    | true    | PASS
+PHONE        | invoke                                       | "901 558 9624"                   | true    | true    | PASS
+MILTIME      | invoke                                       | "2305"                           | true    | true    | PASS
+SSN          | invoke                                       | "abc-de-ghij"                    | false   | false   | PASS
+SSN          | invoke                                       | "123-45 6789"                    | true    | true    | PASS
+SSN          | invoke                                       | "123 45-6789"                    | true    | true    | PASS
+NAME         | invoke                                       | "Smith-Jones, Amy, B"            | true    | true    | PASS
+MILTIME      | invoke                                       | "0060"                           | false   | false   | PASS
+CURRENCY     | invoke                                       | "$0.01"                          | true    | true    | PASS
+CITYSTATEZIP | invoke                                       | "New York, NY 10001"             | true    | true    | PASS
+DATE         | invoke                                       | "11-30-1999"                     | true    | true    | PASS
+DATE         | invoke                                       | "02-30-2001"                     | false   | false   | PASS
+ADDRESS      | invoke                                       | "55 1st Ave"                     | true    | true    | PASS
+PHONE        | invoke                                       | "abc-def-ghij"                   | false   | false   | PASS
+PASSWORD     | invoke                                       | "AbcdefG1234"                    | false   | false   | PASS
+SSN          | invoke                                       | "123_45_6789"                    | false   | false   | PASS
+URL          | invoke                                       | "http://example.c"               | false   | false   | PASS
+PASSWORD     | invoke                                       | "Ab1!xxxxY2"                     | false   | false   | PASS
+ADDRESS      | invoke                                       | "789 North Main Street"          | true    | true    | PASS
+URL          | invoke                                       | "://example.com"                 | false   | false   | PASS
+MILTIME      | invoke                                       | "1000"                           | true    | true    | PASS
+ODDION       | invoke                                       | "ion"                            | true    | true    | PASS
+CITYSTATEZIP | invoke                                       | "123, CA 98030"                  | false   | false   | PASS
+CURRENCY     | invoke                                       | "$12.34"                         | true    | true    | PASS
+URL          | invoke                                       | "sub.domain.co.uk/path"          | true    | true    | PASS
+PASSWORD     | invoke                                       | "A1!bcdeFgHi"                    | false   | false   | PASS
+URL          | invoke                                       | "http://"                        | false   | false   | PASS
+PASSWORD     | invoke                                       | "Aa1!bbbb"                       | false   | false   | PASS
+CITYSTATEZIP | invoke                                       | "San Diego, CA 980300"           | false   | false   | PASS
+URL          | invoke                                       | "example.net/a/b/c"              | true    | true    | PASS
+NAME         | invoke                                       | "O'Neil, Sarah, A"               | true    | true    | PASS
+URL          | invoke                                       | "https://regex101.com/"          | true    | true    | PASS
+SSN          | invoke                                       | "123-45-6789"                    | true    | true    | PASS
+SSN          | invoke                                       | "123-4-6789"                     | false   | false   | PASS
+URL          | invoke                                       | "HTTPS://EXAMPLE.COM"            | true    | true    | PASS
+NAME         | invoke                                       | "Smith, John"                    | true    | true    | PASS
+MILTIME      | invoke                                       | "0959"                           | true    | true    | PASS
+CITYSTATEZIP | invoke                                       | "Los Angeles CA 90001"           | true    | true    | PASS
+SSN          | invoke                                       | "123456789"                      | true    | true    | PASS
+ADDRESS      | invoke                                       | "9 Maple St"                     | true    | true    | PASS
+NAME         | invoke                                       | "Smith John L"                   | false   | false   | PASS
+DATE         | invoke                                       | "04/30/2010"                     | true    | true    | PASS
+CITYSTATEZIP | invoke                                       | "Miami FL 33101"                 | true    | true    | PASS
+CURRENCY     | invoke                                       | "$123,456,789.23"                | true    | true    | PASS
+EMAIL        | invoke                                       | "name@domain"                    | false   | false   | PASS
+NAME         | invoke                                       | "Johnson, Mark"                  | true    | true    | PASS
+ADDRESS      | invoke                                       | "North Main Street"              | false   | false   | PASS
+EMAIL        | invoke                                       | "plainaddress"                   | false   | false   | PASS
+CURRENCY     | invoke                                       | "57,555,000.36"                  | false   | false   | PASS
+NAME         | invoke                                       | "Brown, Lisa, Z"                 | true    | true    | PASS
+CITYSTATEZIP | invoke                                       | "San Diego, CA 98030"            | true    | true    | PASS
+MILTIME      | invoke                                       | "100"                            | false   | false   | PASS
+ADDRESS      | invoke                                       | "789 North Main Lane"            | false   | false   | PASS
+CITYSTATEZIP | invoke                                       | "Tacoma WA 98402"                | true    | true    | PASS
+SSN          | invoke                                       | "123--45--6789"                  | false   | false   | PASS
+EMAIL        | invoke                                       | "user_name@school.edu"           | true    | true    | PASS
+ADDRESS      | invoke                                       | "123 E Pine Rd"                  | true    | true    | PASS
+CURRENCY     | invoke                                       | "$123."                          | false   | false   | PASS
+PASSWORD     | invoke                                       | "ALLUPPERCASE1!"                 | false   | false   | PASS
+SSN          | invoke                                       | "123 45 6789"                    | true    | true    | PASS
+ODDION       | invoke                                       | "emotion"                        | true    | true    | PASS
+CURRENCY     | invoke                                       | "$57,555,000.36"                 | true    | true    | PASS
+EMAIL        | invoke                                       | "name@domain..com"               | false   | false   | PASS
+ODDION       | invoke                                       | "i0n"                            | false   | false   | PASS
+ADDRESS      | invoke                                       | "100 Broadway Boulevard"         | true    | true    | PASS
+URL          | invoke                                       | "http://-example.com"            | false   | false   | PASS
+CURRENCY     | invoke                                       | "$-12.34"                        | false   | false   | PASS
+URL          | invoke                                       | "example..com"                   | false   | false   | PASS
+CITYSTATEZIP | invoke                                       | "San Diego, CA"                  | false   | false   | PASS
+PHONE        | invoke                                       | "901-558-9624 ext 5"             | false   | false   | PASS
+CURRENCY     | invoke                                       | "$57,555,000.366"                | false   | false   | PASS
+MILTIME      | invoke                                       | "ab12"                           | false   | false   | PASS
+CURRENCY     | invoke                                       | "$1,234.56"                      | true    | true    | PASS
+CITYSTATEZIP | invoke                                       | "San Diego, CAA 98030"           | false   | false   | PASS
+NAME         | invoke                                       | "Smith, John, 7"                 | false   | false   | PASS
+ODDION       | invoke                                       | "xxion"                          | true    | true    | PASS
+ADDRESS      | invoke                                       | "42 Oak Road"                    | true    | true    | PASS
+ODDION       | invoke                                       | "abion"                          | true    | true    | PASS
+CURRENCY     | invoke                                       | "$999.99"                        | true    | true    | PASS
+--------------------------------------------------------------------------------
+============================== SUMMARY =========================================
+Total: 192 | Passed: 192 | Failed: 0
+================================================================================
+
+Process finished with exit code 0
